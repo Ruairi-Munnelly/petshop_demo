@@ -1,13 +1,12 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 Download a zip of the project files or clone repo via ```git clone https://github.com/Ruairi-Munnelly/petshop_demo```
-```
+```bash
 
 ## Getting Started
 
 First, run the development server:
 
-```bash
 npm run dev
 # or
 yarn dev
