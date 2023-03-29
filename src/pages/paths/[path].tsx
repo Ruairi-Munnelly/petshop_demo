@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { useState, useEffect } from 'react'
 import styles from "@/styles/Home.module.css";
-//import data from "../../../public/data.json";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import JsonPrettier from "@/functions/usePrettier";
