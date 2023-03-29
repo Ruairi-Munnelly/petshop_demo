@@ -22,31 +22,33 @@ const DataTable = ({ pathData }: { pathData: object }) => {
               Response
             </th>
           </tr>
-          {Object.keys(pathData).map((method) => {
+          {Object.keys(pathData).map((method:string) => {
+            type ObjKey = keyof typeof pathData;
+            const key = method as ObjKey;
             const {
               parameters,
               responses,
-            }: { parameters: object; responses: object } = pathData[method];
+            } = pathData[key];
             return (
               <tr key={method}>
                 <td className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400" style={{width: "10%"}}>
                   <pre
                     dangerouslySetInnerHTML={{
-                      __html: JsonPrettier(JSON.stringify(method, null, 2)),
+                      __html: JsonPrettier(JSON.stringify(method, null, 2)) || '',
                     }}
                   ></pre>
                 </td>
                 <td className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400" style={{width: "45%"}}>
                   <pre
                     dangerouslySetInnerHTML={{
-                      __html: JsonPrettier(JSON.stringify(parameters, null, 2)),
+                      __html: JsonPrettier(JSON.stringify(parameters, null, 2)) || '',
                     }}
                   ></pre>
                 </td>
                 <td className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400" style={{width: "45%"}}>
                   <pre
                     dangerouslySetInnerHTML={{
-                      __html: JsonPrettier(JSON.stringify(responses, null, 2)),
+                      __html: JsonPrettier(JSON.stringify(responses, null, 2)) || '',
                     }}
                   ></pre>
                 </td>

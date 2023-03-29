@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function usePathTagFilter(pathTags:string[], pathFilter:string = 'All') {
+export default function usePathTagFilter(pathFilter:string = 'All') {
   const TAGS = [
     "All",
     "/pet",

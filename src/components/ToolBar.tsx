@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import { PathTagFilterContext } from "../contexts/PathTagFilterContext";
 export default function ToolBar() {
   const { TAGS, filteredTag, setFilteredTag } =
-    useContext(PathTagFilterContext);
+    useContext(PathTagFilterContext) as any;
+
   return (
     <div className="px-6 py-4">
       <ul>
